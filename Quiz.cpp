@@ -103,130 +103,105 @@ void QuestionPose1() {
 	q3.askQuestion();
 	q4.askQuestion();
 	q5.askQuestion();
-	
+
 	system("cls");
 
 	std::cout << "Votre score Totale est de " << Totale << " points sur 150." << std::endl;
 
-	if (Totale >= 50)
+	if (Totale >= 30)
 	{
-		cout << "Bravo pour avoir reussi le Quiz!!! Paser au Quiz suivant !" << endl;
-		cout << "F E L I C I T A T I O N !!!" << endl;
-		string play_again;
-		cout << "Ton choix ";
-		cin >> play_again;
-		if (play_again == "o" || play_again == "O")
-		{
-			Theme();
-		}
-		else
-		{
-			cout << "OK. Au revoir." << endl;
+		cout << "Bien joue tu as passe le quiz!" << endl;
+		cout << "Felicitation" << endl;
 
-		}
 	}        //end of the game
 	else
 	{
-		cout << "Passer au quiz suivant !" << endl;
-		cout << "Voulez-vous reessayer ? O/N " << endl;
-		string play_again;
-		cout << "Ton choix ";
-		cin >> play_again;
-		if (play_again == "o" || play_again == "O")
-		{
-			Theme();
-		}
-		else
-		{
-			cout << "OK. Au revoir." << endl;
-			
-		}
-
+		std::cout << "Desole vous avez rate le quiz!" << std::endl;
 	}
 
-	system("pause");
-	
+	std::cout << "Veut-tu rejoue (O/N) " << std::endl;
+	string play_again;
+	std::cout << "Ton choix: ";
+	std::cin >> play_again;
+	if (play_again == "O" || play_again == "o")
+	{
+		Theme();
+
+	}
+	else
+	{
+		std::cout << "OK. Au revoir." << std::endl;
+	}
 }
+
+//Question 2 
 void QuestionPose2() {
 
-	Question q6;
-	Question q7;
-	Question q8;
-	Question q9;
-	Question q10;
-
-	q6.setValues("5.Which of the following correctly declares an array in C++ ?", "array{10};", "array array[10];", "int array;", "int array[10];", 4, 10);
-
-	q7.setValues("6.What is the size of wchar_t in C++?", "Based on the number of bits in the system", "2 or 4", "4", "2", 1, 10);
-
-	q8.setValues("7.Which is more effective while calling the C++ functions?", "call by object", "call by pointer", "call by value", "call by reference", 4, 10);
-
-	q9.setValues("8.Which of the following is used to terminate the function declaration in C++?", ";", "]", ")", ":", 1, 10);
-
-	q10.setValues("8.Which of the following is used to terminate the function declaration in C++?", ";", "]", ")", ":", 1, 10);
-
-	
-
-	q6.askQuestion();
-	q7.askQuestion();
-	q8.askQuestion();
-	q9.askQuestion();
-	q10.askQuestion();
+	Question q1;
+	Question q2;
+	Question q3;
+	Question q4;
+	Question q5;
 
 
+	q1.setValues("1. Quelle est l'instruction en C pour afficher du texte a l'ecran?", "print(''Hello, World!'');", "echo ''Hello, World!'';", "printf(''Hello, World!'');","system.out.println(''Hello, World!'');", 3, 10);
+
+	q2.setValues("2.Quelle est la declaration correcte d'une variable entière en C?", "integer x", "int x", "x = int", "float x", 2, 10);
+
+	q3.setValues("3.Comment commentez-vous votre code en C?", "Utilisez // pour les commentaires en ligne, ou /* */", " le symbole '#'", "a syntaxe comment:", "la syntaxe '--'  ", 1, 10);
+
+	q4.setValues("4.Quel operateur est utilise pour comparer l'egalite de deux valeurs en C ?", "=", "==", "===", " !=", 2, 10);
+
+	q5.setValues("5.Quelle est la boucle la plus couramment utilisee pour repeter une partie de code un nombre specifie de fois ?", "if;", "swith;", "and;", "for", 4, 10);
+
+
+	q1.askQuestion();
+	q2.askQuestion();
+	q3.askQuestion();
+	q4.askQuestion();
+	q5.askQuestion();
 	system("cls");
 
-	std::cout << "Votre score Totale est de " << Totale << " points sur 150." << std::endl;
+	cout << "Le total de ton score est de  " << Totale << " points sur 100." << endl;
 
-	if (Totale >= 50)
+	if (Totale >= 30)
 	{
-		cout << "Bravo pour avoir reussi le Quiz!!!" << endl;
-		cout << "F E L E C I T A T I O N !!!" << endl;
-		string play_again;
-		cout << "Ton choix ";
-		cin >> play_again;
-		if (play_again == "o" || play_again == "O")
-		{
-			MainMenu();
-		}
-		else
-		{
-			cout << "OK. Au revoir." << endl;
+		cout << "Bien joue tu as passe le quiz!" << endl;
+		cout << "Felicitation" << endl;
+		
+		
 
-		}
 	}        //end of the game
 	else
 	{
-		cout << "Passer au quiz suivant! !" << endl;
-		cout << "Voulez-vous reessayer ? O/N " << endl;
-		string play_again;
-		cout << "Vous avez le choix : ";
-		cin >> play_again;
-		if (play_again == "o" || play_again == "O")
-		{
-			Theme();
-		}
-		else
-		{
-			cout << "OK. Au revoir." << endl;
-
-		}
-
+		std::cout << "Desole vous avez rate le quiz!" << std::endl;
 	}
 
-	system("pause");
+	std::cout << "Veut-tu rejoue (O/N) " << std::endl;
+	string play_again;
+	std::cout << "Ton choix: ";
+	std::cin >> play_again;
+	if (play_again == "O" || play_again == "o")
+	{
+		Theme();
 
+	}
+	else
+	{
+		std::cout << "OK. Au revoir." << std::endl;
+	}
 }
+
 void QuestionPose3() {
 
-	
+
 	Question q11;
 	Question q12;
 	Question q13;
 	Question q14;
 	Question q15;
 
-	
+
 	q11.setValues("11.Quelle entreprise a cree la celebre serie de jeux Pokemon?", "l'entreprise japonaise Game Freak", "la societe  Game World Adventures.", "l'entreprise  Monstres de Poche Inc", "Bandai Namco", 1, 10);
 	q12.setValues("12.Quel jeu video populaire met en scene des animaux anthropomorphes vivant dans une ville et a ete developpe par Nintendo ?", "Super Mario World", "Zelda's Animal Town", "Animal Crossing", "Call Of Duty", 3, 10);
 	q13.setValues("13. Quel jeu video permet aux joueurs de construire des mondes virtuels avec des blocs de differentes couleurs ?", "Minecraft", "Fortnite", "Grand Theft Auto V", "Valorant", 1, 10);
@@ -243,45 +218,29 @@ void QuestionPose3() {
 
 	std::cout << "Ton score Totale est " << Totale << "point sur 150." << std::endl;
 
-	if (Totale >= 50)
+	if (Totale >= 30)
 	{
-		cout << "Bravo pour avoir reussi le Quiz!!!" << endl;
-		cout << "F E L I C I T A T I O N !!!" << endl;
-		string play_again;
-		cout << "Ton choix ";
-		cin >> play_again;
-		if (play_again == "o" || play_again == "O")
-		{
-			MainMenu();
-		}
-		else
-		{
-			cout << "OK. Au revoir." << endl;
-
-		}
-
+		cout << "Bien joue tu as passe le quiz!" << endl;
+		cout << "Felicitation" << endl;
 	}        //end of the game
 	else
 	{
-		cout << "Terminer !" << endl;
-		cout << "Voulez-vous reessayer ? O/N " << endl;
-		string play_again;
-		cout << "Vous avez le choix : ";
-		cin >> play_again;
-		if (play_again == "o" || play_again == "O")
-		{
-			Theme();
-		}
-		else
-		{
-			cout << "OK. Au revoir !" << endl;
-
-		}
-
+		std::cout << "Desole vous avez rate le quiz!" << std::endl;
 	}
 
-	system("pause");
+	std::cout << "Veut-tu rejoue (O/N) " << std::endl;
+	string play_again;
+	std::cout << "Ton choix: ";
+	std::cin >> play_again;
+	if (play_again == "O" || play_again == "o")
+	{
+		Theme();
 
+	}
+	else
+	{
+		std::cout << "OK. Au revoir." << std::endl;
+	}
 }
 
 void Theme() {
@@ -314,8 +273,6 @@ void Theme() {
 		ExitApp();
 		break;
 	}
-
-
 }
 
 // Fonction qui sert à guider le joueur
@@ -359,7 +316,6 @@ void MainMenu() {
 		std::cout << "Au revoir !" << std::endl;
 		break;
 	}
-
 }
 // Declarez cette fonction au debut de votre code pour la rendre accessible aux autres fonctions.
 void Replay() {
