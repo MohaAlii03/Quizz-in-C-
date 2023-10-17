@@ -117,7 +117,7 @@ void QuestionPose1() {
 		cin >> play_again;
 		if (play_again == "o" || play_again == "O")
 		{
-			MainMenu();
+			Theme();
 		}
 		else
 		{
@@ -187,7 +187,7 @@ void QuestionPose2() {
 		cin >> play_again;
 		if (play_again == "o" || play_again == "O")
 		{
-			MainMenu();
+			Theme();
 		}
 		else
 		{
@@ -252,7 +252,7 @@ void QuestionPose3() {
 		cin >> play_again;
 		if (play_again == "o" || play_again == "O")
 		{
-			MainMenu();
+			Theme();
 		}
 		else
 		{
