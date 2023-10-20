@@ -2,71 +2,69 @@
 #include <string>
 #include "Quiz.h"
 
-using namespace std;
+//using namespace std;
 
 int Deviner;
 int Totale;
 
 class Question {
 private:
-	string Texte_Question;
-	string Reponse_1;
-	string Reponse_2;
-	string Reponse_3;
-	string Reponse_4;
-	int Reponse_Correcte;
-	int Score_Question;
+    string Texte_Question;   // Stocke le texte de la question.
+    string Reponse_1;       // Stocke la première réponse.
+    string Reponse_2;       // Stocke la deuxième réponse.
+    string Reponse_3;       // Stocke la troisième réponse.
+    string Reponse_4;       // Stocke la quatrième réponse.
+    int Reponse_Correcte;   // Stocke l'index de la réponse correcte.
+    int Score_Question;     // Stocke le score associé à la question.
 
 public:
-	void setValues(string, string, string, string, string, int, int);
-	void askQuestion();
-
+    void setValues(string, string, string, string, string, int, int);
+    void askQuestion();
 };
+
 
 void Startup() {
 	std::cout << " Lancer le jeu " << std::endl;
 }
 void Question::setValues(string q, string a1, string a2, string a3, string a4, int ca, int pa)
 {
-	Texte_Question = q;
-	Reponse_1 = a1;
-	Reponse_2 = a2;
-	Reponse_3 = a3;
-	Reponse_4 = a4;
-	Reponse_Correcte = ca;
-	Score_Question = pa;
-
+	Texte_Question = q;       // Définit le texte de la question en utilisant la valeur passée en paramètre.
+	Reponse_1 = a1;           // Définit la première réponse en utilisant la valeur passée en paramètre.
+	Reponse_2 = a2;           // Définit la deuxième réponse en utilisant la valeur passée en paramètre.
+	Reponse_3 = a3;           // Définit la troisième réponse en utilisant la valeur passée en paramètre.
+	Reponse_4 = a4;           // Définit la quatrième réponse en utilisant la valeur passée en paramètre.
+	Reponse_Correcte = ca;    // Définit l'indice de la réponse correcte en utilisant la valeur passée en paramètre.
+	Score_Question = pa;      // Définit le score associé à la question en utilisant la valeur passée en paramètre.
 }
 
+
 void Question::askQuestion() {
-	cout << endl;
-	std::cout << Texte_Question << std::endl;
-	std::cout << "1. " << Reponse_1 << std::endl;
-	std::cout << "2. " << Reponse_2 << std::endl;
-	std::cout << "3. " << Reponse_3 << std::endl;
-	std::cout << "4. " << Reponse_4 << std::endl;
-	cout << endl;
+    cout << endl;
+    std::cout << Texte_Question << std::endl;  // Affiche le texte de la question.
+    std::cout << "1. " << Reponse_1 << std::endl;  // Affiche la première réponse possible.
+    std::cout << "2. " << Reponse_2 << std::endl;  // Affiche la deuxième réponse possible.
+    std::cout << "3. " << Reponse_3 << std::endl;  // Affiche la troisième réponse possible.
+    std::cout << "4. " << Reponse_4 << std::endl;  // Affiche la quatrième réponse possible.
+    cout << endl;
 
+    std::cout << "Reponse: " << std::endl;
+    std::cin >> Deviner;  // Attend la réponse de l'utilisateur et la stocke dans la variable Deviner.
 
-	std::cout << "Reponse: " << std::endl;
-	std::cin >> Deviner;
-
-	if (Deviner == Reponse_Correcte)
-	{
-		cout << endl;
-		std::cout << "Tres bien ! Vous avez raison." << std::endl;
-		Totale += Score_Question;
-		std::cout << "Score: " << Score_Question << " En dehors de " << Score_Question << " !" << std::endl;
-
-	}
-	else
-	{
-		cout << endl;
-		std::cout << "Oh, NON. Vous avez tort." << std::endl;
-		std::cout << "Vous gagnez 0 !" << " En dehors de " << Score_Question << " !" << std::endl;
-		std::cout << "La bonne reponse est " << Reponse_Correcte << std::endl;
-		cout << endl;
-	}
+    if (Deviner == Reponse_Correcte)  // Vérifie si la réponse de l'utilisateur correspond à la réponse correcte.
+    {
+        cout << endl;
+        std::cout << "Tres bien ! Vous avez raison." << std::endl;  // Affiche un message si la réponse est correcte.
+        Totale += Score_Question;  // Incrémente le score total de l'utilisateur.
+        std::cout << "Score: " << Score_Question << " En dehors de " << Score_Question << " !" << std::endl;  // Affiche le score gagné pour cette question.
+    }
+    else
+    {
+        cout << endl;
+        std::cout << "Oh, NON. Vous avez tort." << std::endl;  // Affiche un message si la réponse est incorrecte.
+        std::cout << "Vous gagnez 0 !" << " En dehors de " << Score_Question << " !" << std::endl;  // Indique que l'utilisateur n'a pas gagné de points pour cette question.
+        std::cout << "La bonne reponse est " << Reponse_Correcte << std::endl;  // Affiche la réponse correcte.
+        cout << endl;
+    }
 }
 
 
@@ -81,58 +79,59 @@ void ExitApp() {
 
 void QuestionPose1() {
 
-	Question q1;
-	Question q2;
-	Question q3;
-	Question q4;
-	Question q5;
+    // Crée cinq objets de la classe 'Question' pour les cinq questions du quiz.
+    Question q1;
+    Question q2;
+    Question q3;
+    Question q4;
+    Question q5;
 
+    // Utilise la méthode 'setValues' pour initialiser les cinq questions avec leur texte, réponses et scores associés.
+    q1.setValues("1.Quel est le premier satellite envoye dans l'espace ?", "Spoutnik 1", "Explorer 4", "la-lune", "La-Terre", 1, 10);
+    q2.setValues("2.Quelle est la capital de l'australie ?", "Dublin", "Canberra", "Paris", "Sydney", 2, 10);
+    q3.setValues("3.Qui a ecrit L'Odyssee", "Bart", "Emile Zola Right-left", "Homere", "Jean de la Fontaine", 3, 10);
+    q4.setValues("4.Quel pays est celebre pour sa Grande Muraille ?", "France", "Maroc", "Chine", "Allemagne", 3, 10);
+    q5.setValues("4.Qui a peint la Mona Lisa ?", "Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Rembrandt", 3, 10);
 
-	q1.setValues("1.Quel est le premier satellite envoye dans l'espace ?", "Spoutnik 1", " Explorer 4", "la-lune", "La-Terre", 1, 10);
+    // Pose chacune des cinq questions en utilisant la méthode 'askQuestion'.
+    q1.askQuestion();
+    q2.askQuestion();
+    q3.askQuestion();
+    q4.askQuestion();
+    q5.askQuestion();
 
-	q2.setValues("2.Quelle est la capital de l'australie ?", "Dublin", "Canberra", "Paris", "Sydney", 2, 10);
+    // Efface l'écran (utilisation de "system("cls")" pour effacer la console).
+    system("cls");
 
-	q3.setValues("3.Qui a ecrit L'Odyssee", "Bart", "Emile Zola Right-left", "Homere", "Jean de la Fontaine", 3, 10);
+    // Affiche le score total de l'utilisateur.
+    std::cout << "Votre score Totale est de " << Totale << " points sur 150." << std::endl;
 
-	q4.setValues("4.Quel pays est celebre pour sa Grande Muraille ?", "France", "Maroc", "Chine", "Allemagne", 3, 10);
+    // Vérifie si l'utilisateur a réussi (score total supérieur ou égal à 30) ou échoué le quiz.
+    if (Totale >= 30)
+    {
+        cout << "Bien joue tu as passe le quiz!" << endl;
+        cout << "Felicitation" << endl;
+    }
+    else
+    {
+        std::cout << "Desole vous avez rate le quiz!" << std::endl;
+    }
 
-	q5.setValues("4.Qui a peint la Mona Lisa ?", "Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Rembrandt", 3, 10);
-
-	q1.askQuestion();
-	q2.askQuestion();
-	q3.askQuestion();
-	q4.askQuestion();
-	q5.askQuestion();
-
-	system("cls");
-
-	std::cout << "Votre score Totale est de " << Totale << " points sur 150." << std::endl;
-
-	if (Totale >= 30)
-	{
-		cout << "Bien joue tu as passe le quiz!" << endl;
-		cout << "Felicitation" << endl;
-
-	}        //end of the game
-	else
-	{
-		std::cout << "Desole vous avez rate le quiz!" << std::endl;
-	}
-
-	std::cout << "Veut-tu rejoue (O/N) " << std::endl;
-	string play_again;
-	std::cout << "Ton choix: ";
-	std::cin >> play_again;
-	if (play_again == "O" || play_again == "o")
-	{
-		Theme();
-
-	}
-	else
-	{
-		std::cout << "OK. Au revoir." << std::endl;
-	}
+    // Demande à l'utilisateur s'il souhaite rejouer ou quitter le jeu.
+    std::cout << "Veut-tu rejoue (O/N) " << std::endl;
+    string play_again;
+    std::cout << "Ton choix: ";
+    std::cin >> play_again;
+    if (play_again == "O" || play_again == "o")
+    {
+        Theme(); // Redirige l'utilisateur vers la sélection de thème pour rejouer.
+    }
+    else
+    {
+        std::cout << "OK. Au revoir." << std::endl; // Quitte le jeu si l'utilisateur ne souhaite pas rejouer.
+    }
 }
+
 
 //Question 2 
 void QuestionPose2() {
