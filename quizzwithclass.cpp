@@ -193,29 +193,29 @@ void QuestionPose1() {
 //Question 2
 void QuestionPose2() {
 
-    Question q1;
-    Question q2;
-    Question q3;
-    Question q4;
-    Question q5;
+    Question q6;
+    Question q7;
+    Question q8;
+    Question q9;
+    Question q10;
 
 
-    q1.setValues("1. Quelle est l'instruction en C pour afficher du texte a l'ecran?", "print(''Hello, World!'');", "echo ''Hello, World!'';", "printf(''Hello, World!'');","system.out.println(''Hello, World!'');", 3, 10);
+    q6.setValues("1. Quelle est l'instruction en C pour afficher du texte a l'ecran?", "print(''Hello, World!'');", "echo ''Hello, World!'';", "printf(''Hello, World!'');","system.out.println(''Hello, World!'');", 3, 10);
 
-    q2.setValues("2.Quelle est la declaration correcte d'une variable entière en C?", "integer x", "int x", "x = int", "float x", 2, 10);
+    q7.setValues("2.Quelle est la declaration correcte d'une variable entière en C?", "integer x", "int x", "x = int", "float x", 2, 10);
 
-    q3.setValues("3.Comment commentez-vous votre code en C?", "Utilisez // pour les commentaires en ligne, ou /* */", " le symbole '#'", "a syntaxe comment:", "la syntaxe '--'  ", 1, 10);
+    q8.setValues("3.Comment commentez-vous votre code en C?", "Utilisez // pour les commentaires en ligne, ou /* */", " le symbole '#'", "a syntaxe comment:", "la syntaxe '--'  ", 1, 10);
 
-    q4.setValues("4.Quel operateur est utilise pour comparer l'egalite de deux valeurs en C ?", "=", "==", "===", " !=", 2, 10);
+    q9.setValues("4.Quel operateur est utilise pour comparer l'egalite de deux valeurs en C ?", "=", "==", "===", " !=", 2, 10);
 
-    q5.setValues("5.Quelle est la boucle la plus couramment utilisee pour repeter une partie de code un nombre specifie de fois ?", "if;", "swith;", "and;", "for", 4, 10);
+    q10.setValues("5.Quelle est la boucle la plus couramment utilisee pour repeter une partie de code un nombre specifie de fois ?", "if;", "swith;", "and;", "for", 4, 10);
 
 
-    q1.askQuestion();
-    q2.askQuestion();
-    q3.askQuestion();
-    q4.askQuestion();
-    q5.askQuestion();
+    q6.askQuestion();
+    q7.askQuestion();
+    q8.askQuestion();
+    q9.askQuestion();
+    q10.askQuestion();
     system("cls");
 
     cout << "Le total de ton score est de  " << Totale << " points sur 100." << endl;
@@ -259,6 +259,7 @@ void QuestionPose3() {
 
 
     q11.setValues("11.Quelle entreprise a cree la celebre serie de jeux Pokemon?", "l'entreprise japonaise Game Freak", "la societe  Game World Adventures.", "l'entreprise  Monstres de Poche Inc", "Bandai Namco", 1, 10);
+    
     q12.setValues("12.Quel jeu video populaire met en scene des animaux anthropomorphes vivant dans une ville et a ete developpe par Nintendo ?", "Super Mario World", "Zelda's Animal Town", "Animal Crossing", "Call Of Duty", 3, 10);
     q13.setValues("13. Quel jeu video permet aux joueurs de construire des mondes virtuels avec des blocs de differentes couleurs ?", "Minecraft", "Fortnite", "Grand Theft Auto V", "Valorant", 1, 10);
     q14.setValues("14.quel est le jeu de societe le plus ancien ?", "Monopoly", "Jurassic Park", "Senet", "Tetris", 3, 10);
